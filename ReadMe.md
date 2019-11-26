@@ -23,14 +23,14 @@ google.php
 2. Create an App on [Google Developer Console - Create Project ](https://console.developers.google.com/projectcreate).
 
 3. Create an OAuth Client ID on [Google Developer Console - Create Client ID ](https://console.developers.google.com/apis/credentials/oauthclient).
-
-3.1 Put in your redirect_uris as:
+3.1 Select - Web Application
+3.2 Put in your Authorized redirect URIs as:
 
     http://localhost/sign_in/google.php
     https://localhost/sign_in/google.php
 
 
-3.2 Download this file when creating your Credential:
+3.3 Download this file when creating your Credential:
 
     client_secrets.json
 
@@ -49,7 +49,7 @@ composer install
 
 
 {"web":{"client_id":"client_id.apps.googleusercontent.com",
-    "project_id":"login-174700",
+    "project_id":"login-123456",
     "auth_uri":"https://accounts.google.com/o/oauth2/auth",
     "token_uri":"https://oauth2.googleapis.com/token",
     "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
