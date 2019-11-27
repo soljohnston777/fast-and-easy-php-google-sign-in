@@ -21,7 +21,12 @@ if (isset($_REQUEST['logout']))
 	unset($_SESSION["auto"]);
 	unset($_SESSION['token']);
 	$gClient->revokeToken();
-	header('Location: ' . filter_var($google_redirect_url, FILTER_SANITIZE_URL)); //redirect user back to page
+	//Forced Hard Log off
+	$google_redirect_url1 ='https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost/sign_in/google.php';
+	header('Location: ' . filter_var($google_redirect_url1, FILTER_SANITIZE_URL)); //redirect user back to page
+	
+	//Soft Log off - only on your server - not on google
+	// header('Location: ' . filter_var($google_redirect_url, FILTER_SANITIZE_URL)); //redirect user back to page
 }
 // GOOGLE CALLBACK?
 if (isset($_GET['code'])) 
